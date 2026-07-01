@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Poppins:wght@400;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", "Poppins", sans-serif;
+  
+  --color-primary: #FFC83D;
+  --color-secondary: #FF5C5C;
+  --color-accent: #38BDF8;
+  --color-dark: #1E1E1E;
+  --color-muted-bg: #F6F6F6;
+  
+  /* Standardizing borders and shadows */
+  --shadow-brutal-sm: 4px 4px 0px 0px #000000;
+  --shadow-brutal: 8px 8px 0px 0px #000000;
+  --shadow-brutal-lg: 12px 12px 0px 0px #000000;
+  --shadow-brutal-yellow: 8px 8px 0px 0px #FFC83D;
+  --shadow-brutal-red: 8px 8px 0px 0px #FF5C5C;
+  --shadow-brutal-blue: 8px 8px 0px 0px #38BDF8;
+}
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: #FFFFFF;
+  color: #1E1E1E;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar matching cartoon aesthetic */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+  border-left: 3px solid #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFC83D;
+  border: 3px solid #000000;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5C5C;
+}
+
+/* Selection style */
+::selection {
+  background: #FFC83D;
+  color: #000000;
+}
+
+/* Floating animation keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: float 2.5s ease-in-out infinite;
+}
